@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Maria</title>
+</head>
+<body>
+	<h2>Venta</h2>
+	<h3>No pude mandar la lista de compras por el html</h3>
+    <form th:action="@{/productos/venta}" th:object="${listaCompras}" th:method="POST">
+        <table>
+            <tr>
+                <td><label>Codigo de Barras:</label></td>
+                <td><input type="text" id="codigoBarras" th:field="${listaCompras.codigoBarras}"></td>
+            </tr>
+            <tr>
+                <td><label>Cantidad:</label></td>
+                <td><input type="text" id="cantidad" th:field="${listaCompras.cantidad}"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Agregar">
+    </form>
+    <form action="#" th:action="@{/productos/menu}">
+        <input type="submit" value="Atras">
+    </form>  
+</body>
+</html>
